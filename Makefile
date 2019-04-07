@@ -1,13 +1,13 @@
-.PHONY: build clean test help default
+.PHONY: build clean test help default clean
 
-BIN_NAME=ocp-mig-test-data-cli
+BIN_NAME=mig-data-cli
 
 VERSION := $(shell grep "const Version " version/version.go | sed -E 's/.*"(.+)"$$/\1/')
 
 default: build
 
 help:
-	@echo 'Management commands for ocp-mig-test-data-cli:'
+	@echo 'Management commands for mig-data-cli:'
 	@echo
 	@echo 'Usage:'
 	@echo '    make build           Compile the project.'
@@ -22,7 +22,7 @@ build:
 
 clean:
 	@test ! -e bin/${BIN_NAME} || rm bin/${BIN_NAME}
-
+	
 test:
 	go test ./...
 
