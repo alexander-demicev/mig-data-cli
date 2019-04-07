@@ -15,7 +15,6 @@ help:
 	@echo
 	@echo 'Usage:'
 	@echo '    make build           Compile the project.'
-	@echo '    make get-deps        runs dep ensure, mostly used for ci.'
 	
 	@echo '    make clean           Clean the directory tree.'
 	@echo
@@ -24,9 +23,6 @@ build:
 	@echo "building ${BIN_NAME} ${VERSION}"
 	@echo "GOPATH=${GOPATH}"
 	go build -ldflags "-X github.com/alexander-demichev/ocp-mig-test-data-cli/version.GitCommit=${GIT_COMMIT}${GIT_DIRTY} -X github.com/alexander-demichev/ocp-mig-test-data-cli/version.BuildDate=${BUILD_DATE}" -o bin/${BIN_NAME}
-
-get-deps:
-	dep ensure
 
 clean:
 	@test ! -e bin/${BIN_NAME} || rm bin/${BIN_NAME}
