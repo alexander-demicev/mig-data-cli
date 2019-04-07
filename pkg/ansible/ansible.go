@@ -4,12 +4,12 @@ import (
 	"bytes"
 	"fmt"
 	"io"
+	"log"
 	"os"
 	"os/exec"
 	"strconv"
 
-	"github.com/alexander-demichev/ocp-mig-test-data-cli/log"
-	"github.com/alexander-demichev/ocp-mig-test-data-cli/shared"
+	"github.com/alexander-demichev/ocp-mig-test-data-cli/pkg/shared"
 )
 
 // RunPlaybook run ansible playbook
@@ -20,7 +20,7 @@ func RunPlaybook(name string, withData, withBackup, withRestore bool) {
 	}
 
 	nameArg := fmt.Sprintf("%s.yml", name)
-	withDataArg := fmt.Sprintf("with_data=%s", strconv.FormatBool(withData))
+	withDataArg := fmt.Sprintf("with_resources=%s", strconv.FormatBool(withData))
 	withBackupArg := fmt.Sprintf("with_backup=%s", strconv.FormatBool(withBackup))
 	withRestoreArg := fmt.Sprintf("with_restore=%s", strconv.FormatBool(withRestore))
 

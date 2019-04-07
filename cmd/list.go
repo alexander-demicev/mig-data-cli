@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/alexander-demichev/ocp-mig-test-data-cli/list"
+	"github.com/alexander-demichev/ocp-mig-test-data-cli/pkg/list"
 
 	"github.com/spf13/cobra"
 )

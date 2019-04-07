@@ -5,8 +5,8 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/alexander-demichev/ocp-mig-test-data-cli/log"
-	"github.com/alexander-demichev/ocp-mig-test-data-cli/shared"
+	"github.com/alexander-demichev/ocp-mig-test-data-cli/pkg/log"
+	"github.com/alexander-demichev/ocp-mig-test-data-cli/pkg/shared"
 )
 
 // List list available samples
