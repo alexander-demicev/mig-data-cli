@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/alexander-demichev/ocp-mig-test-data-cli/cmd"
+	"github.com/alexander-demichev/mig-data-cli/cmd"
 )
 
 func main() {

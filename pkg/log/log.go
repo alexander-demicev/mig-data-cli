@@ -4,7 +4,7 @@ import (
 	"os"
 
 	"github.com/Sirupsen/logrus"
-	"github.com/alexander-demichev/ocp-mig-test-data-cli/pkg/config"
+	"github.com/alexander-demichev/mig-data-cli/pkg/config"
 )
 
 // Logger defines a set of methods for writing application logs. Derived from and

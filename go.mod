@@ -1,4 +1,4 @@
-module github.com/alexander-demichev/ocp-mig-test-data-cli
+module github.com/alexander-demichev/mig-data-cli
 
 require (
 	github.com/Sirupsen/logrus v1.0.6

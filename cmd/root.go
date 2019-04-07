@@ -3,10 +3,10 @@ package cmd
 import (
 	"errors"
 
-	"github.com/alexander-demichev/ocp-mig-test-data-cli/pkg/ansible"
-	"github.com/alexander-demichev/ocp-mig-test-data-cli/pkg/log"
+	"github.com/alexander-demichev/mig-data-cli/pkg/ansible"
+	"github.com/alexander-demichev/mig-data-cli/pkg/list"
+	"github.com/alexander-demichev/mig-data-cli/pkg/log"
 
-	"github.com/alexander-demichev/ocp-mig-test-data-cli/pkg/list"
 	"github.com/spf13/cobra"
 )
 
@@ -40,12 +40,18 @@ var rootCmd = &cobra.Command{
 		}
 	},
 	Args: func(cmd *cobra.Command, args []string) error {
+		if len(args) == 1 {
+			if !list.IsValidPlaybook(args[0]) {
+				return errors.New("This sample doesn't exists")
+			}
+		}
+
 		if len(args) > 1 {
 			return errors.New("Not possible to create more then 1 sample")
 		}
 
-		if !list.IsValidPlaybook(args[0]) {
-			return errors.New("This sample doesn't exists")
+		if len(args) == 0 {
+			return errors.New("Need at least 1 argument")
 		}
 		return nil
 	},

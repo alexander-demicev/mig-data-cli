@@ -9,7 +9,7 @@ import (
 	"os/exec"
 	"strconv"
 
-	"github.com/alexander-demichev/ocp-mig-test-data-cli/pkg/shared"
+	"github.com/alexander-demichev/mig-data-cli/pkg/shared"
 )
 
 // RunPlaybook run ansible playbook

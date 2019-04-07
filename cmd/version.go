@@ -3,7 +3,7 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/alexander-demichev/ocp-mig-test-data-cli/pkg/version"
+	"github.com/alexander-demichev/mig-data-cli/pkg/version"
 	"github.com/spf13/cobra"
 )
 
