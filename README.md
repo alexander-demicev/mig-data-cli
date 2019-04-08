@@ -1,4 +1,4 @@
-# ocp-mig-test-data-cli
+# mig-data-cli
 
 CLI for ocp-mig-test-data
 
