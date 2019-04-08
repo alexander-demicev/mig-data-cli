@@ -22,6 +22,7 @@ Download and build CLI
 
 CLI is able to create samples, backups and restores separatly or in combination with each other. To list all samples use ``mig-data-cli help``.
 
+### First run
 Run ``mig-data-cli clone`` to clone repo with sample data ansible playbooks.
 
 ```console
